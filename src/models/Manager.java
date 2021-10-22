@@ -13,4 +13,13 @@ public class Manager {
     public void addClient(int id, String name, long cellphone, String career, String birthday){
         clientes.add(new Cliente(id, name, cellphone, career, birthday));
     }
+
+    public Cliente getClient(int id){
+        for (Cliente cliente : clientes) {
+            if (cliente.getId() == id) {
+                return cliente;
+            }
+        }
+        return null;
+    }
 }
